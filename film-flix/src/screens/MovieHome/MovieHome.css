@@ -1,4 +1,33 @@
+
+.movie-link {
+font-size: 64px;
+text-decoration: none;
+font-family: fantasy;
+font-weight: 500;
+color: rgb(174, 229, 233);
+padding: 40px;
+top: 30px;
+ margin-top:10px;
+}
+
+
+.movies-word {
+color: white;
+font-size: 24px;
+text-align: center;
+}
 .movie-home {
-  background-color: rgb(67, 215, 138);
+  background-color: rgb(44, 44, 48);
   padding-bottom: 33px;
+}
+
+.popular-movies{
+  display: flex; 
+}
+
+.pop-movies {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  
 }

@@ -12,17 +12,11 @@ export default function MainContainer() {
       let response = await axios.get(url);
       const theData = response.data.results;
       setMovies(theData);
-      // console.log(theData)
     };
     fetchData(
       `https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`
     );
   }, []);
-
-  // const findMovies = (userMovie) => {
-  //   const movieData = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIE_KEY}&query=${userMovie}`;
-  //   fetchData(movieData);
-  // }
 
   // const onSubmit = (event) => {
   //   event.preventDefault();
@@ -34,19 +28,24 @@ export default function MainContainer() {
   //   }
   // }
 
+
+
+  // const findMovies = (userMovie) => {
+  //   const movieData = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIE_KEY}&query=${userMovie}`;
+  //   fetchData(movieData);
+  // }
+
   return (
-    // <div>
-    //    <MovieHome movies={movies}/>
-    // </div>
+     <div className='main-container'>
     <Switch>
-      <Route path='/'>
-        {/* <Route path='/movies' component={MovieHome}></Route> */}
+      <Route path='/movies'>
          <MovieHome movies={movies}/>
       </Route>
-      <Route exact path='/:id'>
-        <MovieDetails deets={movies}/>
+      <Route path='/movies/:id'>
+        <MovieDetails deets={movies} />
       </Route>
-    </Switch>
+      </Switch>
+      // </div>
   );
 }
 

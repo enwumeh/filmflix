@@ -1,8 +1,23 @@
-.board {
-  display: flex;
-  flex-wrap: wrap;
-  color: white;
-  height: 300px;
-  width: 40%;
-  margin: 40px;
+.board { 
+  margin-bottom: 25px;
+ min-height: 300px;
+ height: 300px;
+ min-width: 270px;
+ width: 270px;
+ background-repeat: no-repeat;
+ background-position: 50%;
 }
+
+.movies-link {
+  text-decoration: none;
+}
+
+
+
+/* font-size: 14px;
+ font-weight: bold;
+ text-align: center;
+  color: white;
+  width: 50%;
+  height: 100%;
+  margin: 19px; */

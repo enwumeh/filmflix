@@ -8,14 +8,15 @@ export default function MovieHome(props) {
   return (
     <div className="movie-home">
       <Link to='/movies' className='movie-link'>FilmFlix</Link>
-      <h4>Movies</h4>
-       {console.log("hola")} 
-       {movies.overview} 
+      <h4 className='movies-word'>Popular Movies:</h4>
+       {console.log("TYPEOF", movies)} 
+      <div className='pop-movies'>
        {Object.keys(movies).map((film, id) => (
-      <div key={id}>
-      <MovieBoard keyID={id} id={film} details={movies[film]}></MovieBoard>
+      <div key={id} className='popular-movies'>
+           <MovieBoard keyID={id} id={film} details={movies[film]}></MovieBoard>
       </div>
-      ))} 
+       ))} 
+      </div>
     </div>
   )
 }  

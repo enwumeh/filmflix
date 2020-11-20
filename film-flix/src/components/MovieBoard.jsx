@@ -5,23 +5,30 @@ import "./MovieBoard.css";
 const MovieBoard = (props) => {
   const { details, keyID } = props;
 
-  const movieLink = `/${details.id}`;
+  // const movieLink = `/movies/${details.id}`;
 
   return (
-    <div className="container" key={keyID}>
-      <Link to={movieLink}>
+    
+    //  <div cxlassName="container" key={keyID}>
+      <Link to={`/movies/${details.id}`} className='movies-link'>
         <div
           className="board"
           style={{
-            backgroundImage: `url(https://image.tmdb.org/t/p/w500/${details.poster_path})`,
+            // width: 339,
+            color: "white",
+            backgroundImage: `url(https://image.tmdb.org/t/p/w185/${details.poster_path})`,
           }}
         >
-          {details.title}
+          {/* {console.log(details.overview)} */}
+          
+          <div className='detail-title'>
+            </div>
         </div>
       </Link>
 
-      {console.log("HERE", details)}
-    </div>
+      /* {console.log("HERE", details.popularity)} */
+    //  </div>
+  
   );
 };
 
