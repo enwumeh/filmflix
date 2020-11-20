@@ -3,6 +3,7 @@ import axios from "axios";
 import { Route, Switch } from "react-router-dom";
 import MovieDetails from "../screens/MovieDetails/MovieDetails";
 import MovieHome from "../screens/MovieHome/MovieHome";
+import Header from "../layout/Header";
 
 export default function MainContainer() {
   const [movies, setMovies] = useState([]);
@@ -28,30 +29,30 @@ export default function MainContainer() {
   //   }
   // }
 
-
-
   // const findMovies = (userMovie) => {
   //   const movieData = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_MOVIE_KEY}&query=${userMovie}`;
   //   fetchData(movieData);
   // }
 
   return (
-     <div className='main-container'>
+    <div className="main-container">
+        <Header/>
     <Switch>
-      <Route path='/movies'>
-         <MovieHome movies={movies}/>
+      <Route exact path="/movies">
+        <MovieHome movies={movies} />
       </Route>
-      <Route path='/movies/:id'>
+      <Route path="/movies/:id">
         <MovieDetails deets={movies} />
+        </Route>
+        <Route path="/">
       </Route>
-      </Switch>
-      // </div>
+      {/* <Route
+        path='/movies/:id'
+        render={(props) => (
+          <MovieDetails{...props} isAuthed={true} />
+        )}
+      /> */}
+    </Switch>
+     </div>
   );
 }
-
-// <Switch>
-//   <Route path='/movies'>
-//   </Route>
-//   <Route path='/movies/:id'>
-//   </Route>
-// </Switch>

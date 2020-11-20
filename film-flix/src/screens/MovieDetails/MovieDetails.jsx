@@ -16,7 +16,7 @@ export default function MovieDetails(props) {
   
   // let movMatch = deets.find((i) => params.id === deets[i].id )
 
-  const dID = params.id;
+  // const dID = params.id;
   
   const movieMatch = deets.find(movie => params.id)
     
@@ -27,23 +27,21 @@ return (
   deets ? 
    (
     <div className="movie-home">
-      <div className='movie-title-dt'>
-          {console.log("movieMatch:", movieMatch)}
-          {console.log("dID:", dID)}
-
-        {!!movieMatch}
-      </div>
-      <div className='image-dt' style={{ picURL }}>
-AHHHHH
-      </div>
-      
+          {console.log("movieMatch:",movieMatch)}
+        <div className='image-dt' style={{ picURL }}>
+        {/* {console.log("dID:", dID)} */}
+          {movieMatch.backdrop_path} 
+        {movieMatch.title} 
+          {movieMatch.overview}  
+           {deets[3].overview} 
+          AHHHHH
+        </div>
     </div>
   )
   : 
-   (
-    <div>
-      ....Loading
-  </div>
-  ) )
+  //  (
+      null
+   )
+
 }  
 
