@@ -1,15 +1,21 @@
 import React from "react";
 import './MovieHome.css'
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import MovieBoard from '../../components/MovieBoard'
 
 export default function MovieHome(props) {
   const { movies } = props;
+
+
+
+
+
+  
   return (
     <div className="movie-home">
-      <Link to='/movies' className='movie-link'>FilmFlix</Link>
-      <h4 className='movies-word'>Popular Movies:</h4>
-       {/* {console.log("TYPEOF", movies)}  */}
+      {/* <h4 className='movies-word'>Popular Movies:</h4> */}
+      {/* {console.log("TYPEOF", movies)}  */}
+      
       <div className='pop-movies'>
        {Object.keys(movies).map((film, id) => (
       <div key={id} className='popular-movies'>

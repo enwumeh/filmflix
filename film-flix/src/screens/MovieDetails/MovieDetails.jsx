@@ -18,7 +18,7 @@ export default function MovieDetails(props) {
 
   // const dID = params.id;
   
-  const movieMatch = deets.find(movie => params.id)
+  const movieMatch = deets.find(movie => movie.id == params.id)
     
 
   
@@ -28,13 +28,12 @@ return (
    (
     <div className="movie-home">
           {console.log("movieMatch:",movieMatch)}
-        <div className='image-dt' style={{ picURL }}>
+        <div key={movieMatch} className='image-dt' style={{ picURL }}>
         {/* {console.log("dID:", dID)} */}
-          {movieMatch.backdrop_path} 
-        {movieMatch.title} 
-          {movieMatch.overview}  
-           {deets[3].overview} 
-          AHHHHH
+          {movieMatch.title} 
+        {/* {deets[13].overview}  */}
+        </div>
+        <div className='page'>
         </div>
     </div>
   )
@@ -44,4 +43,3 @@ return (
    )
 
 }  
-
