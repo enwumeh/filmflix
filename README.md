@@ -21,8 +21,7 @@ Mobile:
 Tablet:
 "https://drive.google.com/file/d/1aUrGSqXimPbAGA1rVm-Wu4GLnkHkJq4E/preview" 
 
-Link to movie details:  
-"https://drive.google.com/file/d/1-wj9_0rbuNsXRAk_IsqQ9_2lFfrPwm1N/preview" 
+Link to movie details:  "https://drive.google.com/file/d/1-wj9_0rbuNsXRAk_IsqQ9_2lFfrPwm1N/preview" 
 
 
 
