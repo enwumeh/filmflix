@@ -2,3 +2,20 @@
   background-color: rgb(44, 44, 48);
   padding-bottom: 44px;
 }
+ .movies-link {
+   text-decoration: none;
+   font-size: 33px;
+   padding-left: 33px;
+   color: white;
+   /* background-color: pink; */
+ }
+
+ /* .movie-show-link {
+   background-color: rgb(216, 208, 170);
+   font-family: fantasy;
+   height: 43px;
+ } */
+
+ /* .movie-link {
+   color: red;
+ } */

@@ -13,7 +13,7 @@ export default function MovieHome(props) {
   
   return (
     <div className="movie-home">
-      {/* <h4 className='movies-word'>Popular Movies:</h4> */}
+      <h4 className='movies-word'>Popular Movies:</h4>
       {/* {console.log("TYPEOF", movies)}  */}
       
       <div className='pop-movies'>

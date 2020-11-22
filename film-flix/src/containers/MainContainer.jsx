@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router-dom";
 import MovieDetails from "../screens/MovieDetails/MovieDetails";
 import MovieHome from "../screens/MovieHome/MovieHome";
 import Header from "../layout/Header";
-// import CatFacts from '../components/CatFacts'
+import './MainContainer.css' 
 
 export default function MainContainer() {
   const [movies, setMovies] = useState([]);
@@ -44,23 +44,21 @@ export default function MainContainer() {
   return ( 
     <div className="main-container">
       {/* <h4 className='movies-word'>Popular Movies:</h4> */}
-
       <Header />
-      {/* <form onSubmit={onSubmit}>
+      {/* <span> */}
+      {/* <form onSubmit={onSubmit} className='submit-form'>
         <input
-          ref={(input) => {input.target = input}}
+          // ref={(input) => {input.target = input}}
           type="text"
         />
-      </form> */}
-      <form onSubmit={onSubmit}>
+        </form> */}
+        {/* </span> */}
+      {/* <form onSubmit={onSubmit}>
         <input
           onChange={e => e.value}
           type="text"
         />
-      </form>
-
-      <h4 className='movies-word'>Popular Movies:</h4>
-
+      </form> */}
       {/* <CatFacts/> */}
       {/* <Switch> */}
       <Route exact path="/movies">
