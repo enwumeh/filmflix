@@ -8,3 +8,18 @@
   color: black;
   padding: 200px;
 }
+
+.image-dt {
+  display: inline-block;
+  height: 99px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url('./images/checkers.jpg');
+  top: 400px;
+}
+
+.overview {
+  width: 45%;
+  float: right;
+}

@@ -1,22 +1,24 @@
 
-.movie-link {
+a.movie-link {
 font-size: 64px;
 text-decoration: none;
 font-family: fantasy;
 font-weight: 500;
 color: rgb(240, 243, 243);
+position: relative;
 padding: 40px;
-top: 30px;
+left: 30px;
+top: 16px;
  margin-top:10px;
 }
 
 
 .movies-word {
 color: white;
-font-size: 24px;
+font-size: 34px;
 font-family: fantasy;
 text-align: center;
-padding-bottom: 73px;
+padding-bottom: 43px;
 margin: 0px;
 }
 .movie-home {
@@ -25,7 +27,8 @@ margin: 0px;
 }
 
 .popular-movies{
-  display: flex; 
+  display: flex;
+  font-size: 30px;
 }
 
 .pop-movies {
@@ -33,4 +36,15 @@ margin: 0px;
   flex-flow: row wrap;
   justify-content: space-evenly;
   
+}
+
+.submit-form {
+  text-align: center;
+  /* margin: 0 auto; */
+  display: block;
+  padding: 50px;
+}
+
+input {
+  width: 19%;
 }

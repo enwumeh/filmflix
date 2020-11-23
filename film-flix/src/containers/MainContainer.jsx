@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 import MovieDetails from "../screens/MovieDetails/MovieDetails";
 import MovieHome from "../screens/MovieHome/MovieHome";
 import Header from "../layout/Header";
@@ -9,14 +9,12 @@ import './MainContainer.css'
 export default function MainContainer() {
   const [movies, setMovies] = useState([]);
 
-  const popURL = `https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`
+  const apiKey = `1209dd5b492a1668ef9d6c969ed8e6aa`
+  const popURL = encodeURI(`https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`)
 
   useEffect(() => {
    fetchData(popURL)
   }, []);
-
-  // fetchData(popURL);
-
 
   const fetchData = async (url) => {
     let response = await axios.get(url);
@@ -27,15 +25,15 @@ export default function MainContainer() {
   const onSubmit = (e) => {
     e.preventDefault();
     const userInput = e.target.value;
-    if (userInput === "") {
+    if (!userInput === "") {
       fetchData(`https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`);
     } else {
       findMovies(userInput);
     }
   }
 
-  const findMovies = (userMovie) => {
-    const movieData = `https://api.themoviedb.org/3/search/movie?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&query=${userMovie}`;
+  const findMovies = (userQuery) => {
+    const movieData = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${userQuery}&include_adult=false`;
     fetchData(movieData);
   }
 
@@ -46,12 +44,7 @@ export default function MainContainer() {
       {/* <h4 className='movies-word'>Popular Movies:</h4> */}
       <Header />
       {/* <span> */}
-      {/* <form onSubmit={onSubmit} className='submit-form'>
-        <input
-          // ref={(input) => {input.target = input}}
-          type="text"
-        />
-        </form> */}
+      
         {/* </span> */}
       {/* <form onSubmit={onSubmit}>
         <input
@@ -63,7 +56,7 @@ export default function MainContainer() {
       {/* <Switch> */}
       <Route exact path="/movies">
 
-        <MovieHome movies={movies} />
+        <MovieHome onSubmit={onSubmit} movies={movies} />
         
       </Route>
       <Route path="/movies/:id">
