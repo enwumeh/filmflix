@@ -25,7 +25,7 @@ export default function MainContainer() {
   const onSubmit = (e) => {
     e.preventDefault();
     const userInput = e.target.value;
-    if (!userInput === "") {
+    if (userInput === "") {
       fetchData(`https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`);
     } else {
       findMovies(userInput);
