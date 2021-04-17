@@ -10,7 +10,7 @@ export default function MovieHome(props) {
     <div className="movie-home">
       <h1 className="movies-word">Popular Movies:</h1>
       <div className="submit-form">
-        <form onSubmit={onSubmit} className='form'>
+        <form onSubmit={onSubmit} className="form">
           <input
             // ref={(input) => {input.target = input}}
             type="text"

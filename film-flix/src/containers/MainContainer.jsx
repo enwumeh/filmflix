@@ -4,48 +4,55 @@ import { Route } from "react-router-dom";
 import MovieDetails from "../screens/MovieDetails/MovieDetails";
 import MovieHome from "../screens/MovieHome/MovieHome";
 import Header from "../layout/Header";
-import './MainContainer.css' 
+import "./MainContainer.css";
 
 export default function MainContainer() {
   const [movies, setMovies] = useState([]);
 
-  const apiKey = `1209dd5b492a1668ef9d6c969ed8e6aa`
-  const popURL = encodeURI(`https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`)
+  const apiKey = `1209dd5b492a1668ef9d6c969ed8e6aa`;
+  const popURL = encodeURI(
+    `https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`
+  );
 
   useEffect(() => {
-   fetchData(popURL)
+    fetchData(popURL);
+    ;
   }, []);
+
 
   const fetchData = async (url) => {
     let response = await axios.get(url);
     const theData = response.data.results;
     setMovies(theData);
-  }
+  };
+
+
 
   const onSubmit = (e) => {
     e.preventDefault();
     const userInput = e.target.value;
+    console.log()
     if (userInput === "") {
-      fetchData(`https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`);
+      fetchData(
+        `https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`
+      );
     } else {
       findMovies(userInput);
     }
-  }
+  };
 
   const findMovies = (userQuery) => {
     const movieData = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${userQuery}&include_adult=false`;
     fetchData(movieData);
-  }
+  };
 
-
-
-  return ( 
+  return (
     <div className="main-container">
       {/* <h4 className='movies-word'>Popular Movies:</h4> */}
       <Header />
       {/* <span> */}
-      
-        {/* </span> */}
+
+      {/* </span> */}
       {/* <form onSubmit={onSubmit}>
         <input
           onChange={e => e.value}
@@ -55,14 +62,13 @@ export default function MainContainer() {
       {/* <CatFacts/> */}
       {/* <Switch> */}
       <Route exact path="/movies">
-
         <MovieHome onSubmit={onSubmit} movies={movies} />
-        
       </Route>
       <Route path="/movies/:id">
         <MovieDetails deets={movies} />
-        </Route>
-        <Route exact path="/">
+      </Route>
+      <Route exact path="/">
+        
       </Route>
       {/* <Route
         path='/movies/:id'
@@ -71,7 +77,6 @@ export default function MainContainer() {
         )}
       /> */}
       {/* </Switch> */}
-      
-     </div>
+    </div>
   );
 }
