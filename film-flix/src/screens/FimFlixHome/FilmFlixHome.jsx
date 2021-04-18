@@ -2,8 +2,8 @@ import React from 'react'
 
 const FilmFlixHome = () => {
   return (
-    <div>
-      
+    <div className="flix-home">
+     This will say stuff 
     </div>
   )
 }

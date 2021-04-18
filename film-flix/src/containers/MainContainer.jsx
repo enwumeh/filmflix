@@ -62,13 +62,14 @@ export default function MainContainer() {
       {/* <CatFacts/> */}
       {/* <Switch> */}
       <Route exact path="/movies">
-        <MovieHome onSubmit={onSubmit} movies={movies} />
+        {/* <MovieHome onSubmit={onSubmit} movies={movies} /> */}
       </Route>
       <Route path="/movies/:id">
         <MovieDetails deets={movies} />
       </Route>
       <Route exact path="/">
-        
+      <MovieHome onSubmit={onSubmit} movies={movies} />
+
       </Route>
       {/* <Route
         path='/movies/:id'
