@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import MovieDetails from "../screens/MovieDetails/MovieDetails";
 import MovieHome from "../screens/MovieHome/MovieHome";
 import Header from "../layout/Header";
 import "./MainContainer.css";
+import FilmFlixHome from "../screens/FimFlixHome/FilmFlixHome";
 
 export default function MainContainer() {
   const [movies, setMovies] = useState([]);
 
-  const apiKey = `1209dd5b492a1668ef9d6c969ed8e6aa`;
-  const popURL = encodeURI(
-    `https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`
-  );
+  const apiKey = "1209dd5b492a1668ef9d6c969ed8e6aa";
+  const popURL = encodeURI(`https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`);
 
   useEffect(() => {
     fetchData(popURL);
@@ -50,26 +49,22 @@ export default function MainContainer() {
     <div className="main-container">
       {/* <h4 className='movies-word'>Popular Movies:</h4> */}
       <Header />
-      {/* <span> */}
 
-      {/* </span> */}
       {/* <form onSubmit={onSubmit}>
         <input
           onChange={e => e.value}
           type="text"
         />
-      </form> */}
-      {/* <CatFacts/> */}
-      {/* <Switch> */}
+      </for > */}
+      <Switch>
       <Route exact path="/movies">
-        {/* <MovieHome onSubmit={onSubmit} movies={movies} /> */}
+        <MovieHome onSubmit={onSubmit} movies={movies} />
       </Route>
       <Route path="/movies/:id">
         <MovieDetails deets={movies} />
       </Route>
       <Route exact path="/">
-      <MovieHome onSubmit={onSubmit} movies={movies} />
-
+      <FilmFlixHome/>
       </Route>
       {/* <Route
         path='/movies/:id'
@@ -77,7 +72,7 @@ export default function MainContainer() {
           <MovieDetails{...props} isAuthed={true} />
         )}
       /> */}
-      {/* </Switch> */}
+      </Switch>
     </div>
   );
 }

@@ -8,4 +8,4 @@ const FilmFlixHome = () => {
   )
 }
 
-export default FilmFlixHome
+export default FilmFlixHome;

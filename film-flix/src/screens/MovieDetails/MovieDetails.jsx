@@ -34,7 +34,6 @@ export default function MovieDetails(props) {
         }}
       ></div>
       {/* {deets[13].overview}  */}
-
       <div className="page"></div>
     </div>
   ) : //  (
