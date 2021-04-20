@@ -1,0 +1,26 @@
+.flix-home {
+background-color: gray;
+}
+
+.enter-div {
+  position: relative;
+  margin: 0 auto;
+  line-height: 200px;
+  text-align: center;
+  height: 50%;
+  background-color: rgb(237, 237, 193);
+  width: 70%;
+}
+
+.enter-paragraph {
+  /* display: inline-block; */
+  position: relative;
+  margin: 0 auto;
+}
+
+.enter-button {
+  color: pink;
+  background-color: yellow;
+}
+
+
