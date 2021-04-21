@@ -9,7 +9,7 @@ export default function Header() {
       <Link to='/' className='movie-link'>FilmFlix</Link>
       <div className='movie-show-link'>
       {/* <Link to="/movies" className="movies-link">Movies</Link> */}
-      {/* <Link to="/shows">Shows</Link> */}
+      {/* <Link to="/shows" className="shows-link">Shows</Link> */}
       </div>
     </div>
   );

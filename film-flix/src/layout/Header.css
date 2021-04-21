@@ -1,12 +1,12 @@
 .header {
-  background-color: rgb(44, 44, 48);
+  background-color: rgb(26, 26, 23);
   padding-bottom: 44px;
 }
  .movies-link {
    text-decoration: none;
    font-size: 33px;
    padding-left: 33px;
-   color: white;
+   color: rgb(198, 198, 203);
    /* background-color: pink; */
  }
 

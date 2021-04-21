@@ -51,7 +51,7 @@ export default function MainContainer() {
       <Header />
 
       {/* <form onSubmit={onSubmit}>
-        <input
+        <inputj
           onChange={e => e.value}
           type="text"
         />

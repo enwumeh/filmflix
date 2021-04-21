@@ -1,5 +1,6 @@
 .flix-home {
-background-color: gray;
+background-color: rgb(72, 22, 22);
+height: 100%;
 }
 
 .enter-div {
@@ -8,19 +9,26 @@ background-color: gray;
   line-height: 200px;
   text-align: center;
   height: 50%;
-  background-color: rgb(237, 237, 193);
+  background-color: rgb(26, 26, 23);
   width: 70%;
 }
 
 .enter-paragraph {
-  /* display: inline-block; */
+  font-family:fantasy;
+  font-size: 47px;
   position: relative;
   margin: 0 auto;
+color: rgba(167, 162, 162, 0.762);
 }
 
 .enter-button {
-  color: pink;
-  background-color: yellow;
+  color: rgb(218, 212, 212);
+  background-color: rgb(26, 26, 23);
+  border-radius: 50%;
+  font-size: 25px;
+  border: none;
+  height: 43px;
+
 }
 
 

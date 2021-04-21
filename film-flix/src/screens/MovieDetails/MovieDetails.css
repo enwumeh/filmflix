@@ -1,54 +1,55 @@
 .details-text {
-right: 40px;
-color: white;
-display: block;
-  /* margin-block-start: 1em; */
-  /* margin-block-end: 1em; */
-  margin-inline-start: 0px;
-  margin-inline-end: 300px;
-}
-
-
-.page {
-  height: 100%;
-  color: black;
-  padding: 200px;
-}
-
-.image-dt {
-  display: inline-block;
-  height: 840px;
-  width: 800px;
-  position: relative;
-  background-repeat: no-repeat;
-  background-position: 1.5in 1in;
-  top: -200px;
-  /* padding-right: 200px; */
-}
-
-.overview {
-  width: 45%;
-  float: right;
-  position: relative;
-  top: 90px;
-  left: 40%;
-  right: -43%;
+  right: 40px;
+  color: white;
+  display: block;
+    /* margin-block-start: 1em; */
+    /* margin-block-end: 1em; */
+    margin-inline-start: 0px;
+    margin-inline-end: 300px;
+  }
   
   
-}
-
-
-.title {
+  .page {
+    height: 100%;
+    color: black;
+    padding: 200px;
+  }
+  
+  .image-dt {
+    display: inline-block;
+    height: 840px;
+    width: 800px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: 1.5in 1in;
+    top: -200px;
+    /* padding-right: 200px; */
+  }
+  
+  .overview {
+    width: 45%;
+    float: right;
+    position: relative;
+    top: 90px;
+    left: 40%;
+    right: -43%;
+    
+    
+  }
+  
+  
+  .title {
+    float: right;
+    position: relative;
+    font-size: 27px;
+    /* left: -355px; */
+    left: -10%;
+    font-weight: bold;
+  }
+  
+  .release-date {
+    font-size: 20px;
+  position: relative; 
   float: right;
-  position: relative;
-  font-size: 27px;
-  /* left: -355px; */
-  left: -10%;
-  font-weight: bold;
-}
-
-.release-date {
-  font-size: 20px;
-position: relative; 
-float: right;
-}
+  }
+  

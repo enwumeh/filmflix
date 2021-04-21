@@ -9,7 +9,7 @@ const FilmFlixHome = () => {
         <p className="enter-paragraph">
           Find a movie to watch tonight, or your new favorite show
         </p>
-        <Link to="/movies"><button className=".enter-button">
+        <Link to="/movies"><button className="enter-button">
           ENTER SITE
            </button>
           </Link>
