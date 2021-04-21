@@ -10,6 +10,7 @@ export default function MovieHome(props) {
     <div className="movie-home">
       <h1 className="movies-word">Popular Movies:</h1>
       <div className="submit-form">
+        Search or a film here:
         <form onSubmit={onSubmit} className="form">
           <input
             // ref={(input) => {input.target = input}}
@@ -25,7 +26,8 @@ export default function MovieHome(props) {
               keyID={id}
               id={film}
               details={movies[film]}
-            ></MovieBoard>
+            >
+            </MovieBoard>
           </div>
         ))}
       </div>

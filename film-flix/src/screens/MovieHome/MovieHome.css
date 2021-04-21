@@ -41,9 +41,10 @@ margin: 0px;
 
 .submit-form {
   text-align: center;
-  /* margin: 0 auto; */
   display: block;
+  font-size: 20px;
   padding: 50px;
+  color: white;
 }
 
 input {
