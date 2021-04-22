@@ -8,11 +8,13 @@ const FilmFlixHome = () => {
       <div className="enter-div">
         <p className="enter-paragraph">
           Find a movie to watch tonight, or your new favorite show
-        </p>
+          </p>
         <Link to="/movies"><button className="enter-button">
-          ENTER SITE
+            ENTER SITE
            </button>
+           
           </Link>
+          
       </div>
     </div>
   );

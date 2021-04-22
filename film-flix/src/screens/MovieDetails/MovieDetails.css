@@ -17,12 +17,12 @@
   
   .image-dt {
     display: inline-block;
-    height: 840px;
-    width: 800px;
+    height: 440px;
+    width: 400px;
     position: relative;
     background-repeat: no-repeat;
     background-position: 1.5in 1in;
-    top: -200px;
+    top: -70px;
     /* padding-right: 200px; */
   }
   
@@ -31,7 +31,7 @@
     float: right;
     position: relative;
     top: 90px;
-    left: 40%;
+    left: 20%;
     right: -43%;
     
     

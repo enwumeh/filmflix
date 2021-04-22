@@ -9,7 +9,9 @@
 }
 
 .movies-link {
+  /* position: relative; */
   text-decoration: none;
+  /* left: 40px; */
 }
 
 
