@@ -28,41 +28,43 @@ export default function MainContainer() {
   const onSubmit = (e) => {
     e.preventDefault();
     const userInput = e.target.value;
-    console.log();
-    if (userInput === "") {
+    if (userInput == '') {
+    console.log("first condition", userInput);
+    findMovies(userInput);
+    } else {
       fetchData(
         `https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`
       );
-    } else {
-      findMovies(userInput);
+    console.log("second condition", userInput);
     }
   };
 
   const findMovies = (userQuery) => {
     const movieData = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${userQuery}&include_adult=false`;
     fetchData(movieData);
+    // http://localhost:4000/api/v1/oils
   };
 
   return (
     <div className="main-container">
       <Switch>
         <Route exact path="/movies">
-          \
-          <Layout>
+           <Layout>
             <MovieHome onSubmit={onSubmit} movies={movies} />
-          </Layout>
-        </Route>
+            </Layout>
+          </Route>
         <Route path="/movies/:id">
           <Layout>
             <MovieDetails deets={movies} />
           </Layout>
-        </Route>
+          </Route>
         <Route exact path="/">
           <Layout>
             <FilmFlixHome />
-          </Layout>
-        </Route>
-      </Switch>
+            </Layout>
+            </Route>
+        </Switch>
+      
     </div>
   );
 }
