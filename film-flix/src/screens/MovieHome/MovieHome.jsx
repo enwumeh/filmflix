@@ -22,7 +22,7 @@ export default function MovieHome(props) {
           <input
             type="text"
           />
-          <button>click me please</button>
+          <button>Find films!</button>
         </form>
       </div>
  
