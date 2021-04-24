@@ -46,7 +46,7 @@ export default function MovieDetails(props) {
         }}
       >
       </div>
-      <div className="page"></div>
+      {/* <div className="page"></div>
       <div
         // key={movieMatch}
         className="image-dt"
@@ -54,7 +54,8 @@ export default function MovieDetails(props) {
           backgroundImage: `url(${vidURL})`,
         }}
       >
-      </div>
+      </div> */}
+
     </div>
   ) : //  (
   null;

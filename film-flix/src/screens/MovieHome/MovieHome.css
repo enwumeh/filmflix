@@ -63,6 +63,10 @@ input {
     /* background-color: pink; */
   }
 
+  .movie-home {
+    background-color: rgb(26, 26, 23);
+    padding-bottom: 33px;
+  }
   .board { 
     margin-bottom: 25px;
    min-height: 300px;
