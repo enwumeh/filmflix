@@ -2,3 +2,14 @@
 .main-container {
   color: black;
 }
+
+
+@media screen and (max-width: 414px) {
+  .enter-paragraph {
+    color: rgba(211, 210, 210, 0.762);
+
+    /* background-color: rgba(159, 101, 252, 0.563); */
+    font-size: 25px;
+    line-height: 100%;
+  }
+}

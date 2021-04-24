@@ -1,8 +1,6 @@
-
-
 .flix-home {
-background-color: rgb(72, 22, 22);
-height: 1040px;
+  background-color: rgb(72, 22, 22);
+  height: 1040px;
 }
 
 .enter-div {
@@ -16,12 +14,12 @@ height: 1040px;
 }
 
 .enter-paragraph {
-  font-family:fantasy;
+  font-family: fantasy;
   font-size: 47px;
   position: relative;
   top: 20%;
   margin: 0 auto;
-color: rgba(211, 210, 210, 0.762);
+  color: rgba(211, 210, 210, 0.762);
 }
 
 .enter-button {
@@ -33,7 +31,47 @@ color: rgba(211, 210, 210, 0.762);
   font-size: 25px;
   border: none;
   height: 43px;
-
 }
 
+@media screen and (max-width: 414px) {
+  .enter-paragraph {
+    color: rgba(211, 210, 210, 0.762);
 
+    /* background-color: rgba(159, 101, 252, 0.563); */
+    font-size: 25px;
+    line-height: 110%;
+  }
+
+  .enter-button {
+    color: rgb(167, 24, 24);
+    background-color: rgb(46, 46, 43);
+    /* border-radius: 90%; */
+    position: relative;
+    top: 22%;
+    font-size: 22px;
+    border: none;
+    height: 43px;
+  }
+
+  .enter-div {
+    position: relative;
+    margin: 0 auto;
+    line-height: 200px;
+    text-align: center;
+    height:90%;
+    background-color: rgb(26, 26, 23);
+    width: 82%;
+  }
+
+  .flix-home {
+    position: relative;
+    background-color: rgb(72, 22, 22);
+    height: 550px;
+  }
+
+  #footer-container {
+    height: 0.3px;
+    color: rgb(124, 123, 124);
+    background-color: rgb(26, 24, 25);
+  }
+}
