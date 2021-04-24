@@ -29,20 +29,19 @@ export default function MainContainer() {
     e.preventDefault();
     const userInput = e.target.value;
     if (userInput) {
-    console.log("first condition", userInput);
+    console.log("first condition", typeof userInput);
     findMovies(userInput);
     } else {
+    console.log("second condition", typeof userInput);
       fetchData(
         `https://api.themoviedb.org/3/movie/popular?api_key=1209dd5b492a1668ef9d6c969ed8e6aa&language=en-US`
       );
-    console.log("second condition", userInput);
     }
   };
 
   const findMovies = (userQuery) => {
     const movieData = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${userQuery}&include_adult=false`;
     fetchData(movieData);
-    // http://localhost:4000/api/v1/oils
   };
 
   return (

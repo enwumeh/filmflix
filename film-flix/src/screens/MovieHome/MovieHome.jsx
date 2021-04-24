@@ -3,7 +3,7 @@ import "./MovieHome.css";
 import MovieBoard from "../../components/MovieBoard";
 
 export default function MovieHome(props) {
-  const { movies, onSubmit } = props;
+  const { movies, onSubmit, findMovies } = props;
 
   // const funct = (e) => {
   //   // const userInput = "";
@@ -18,35 +18,28 @@ export default function MovieHome(props) {
       <h1 className="movies-word">Popular Movies:</h1>
       <div className="submit-form">
         Search for a film here
-        <form onSubmit={onSubmit} className="form" onChange={onSubmit}>
-          <input
-            type="text"
-          />
-          <button>Find films!</button>
+        <form  className="form" onSubmit={onSubmit} onChange={onSubmit}>
+          <input type="text"/>
+          {/* <button>Find films!</button> */}
         </form>
       </div>
- 
-      <div className="pop-movies">
 
-      {/* {console.log(typeof onSubmit, movies[20])} */}
-        {typeof onSubmit ?
-          
-            Object.keys(movies).map((film, id) => (
+      <div className="pop-movies">
+        {/* {console.log(typeof onSubmit, movies[20])} */}
+        { typeof onSubmit
+          ? Object.keys(movies).map((film, id) => (
               <div key={id} className="popular-movies">
                 <MovieBoard
                   keyID={id}
                   id={film}
                   details={movies[film]}
-                >
-                </MovieBoard>
+                ></MovieBoard>
               </div>
-          
             ))
-           : null}
+          : null }
       </div>
     </div>
   );
 }
 
 // {console.log(typeof movies[0], typeof onSubmit)}
-
