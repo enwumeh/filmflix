@@ -51,3 +51,37 @@ input {
   height: 25px;
   /* padding-top: 40px; */
 }
+
+
+
+@media screen and (max-width: 414px) {
+  .movies-link {
+    text-decoration: none;
+    font-size: 33px;
+    /* padding: 300px; */
+    color: rgb(198, 198, 203);
+    /* background-color: pink; */
+  }
+
+  .board { 
+    margin-bottom: 25px;
+   min-height: 300px;
+   height: 300px;
+   min-width: 200px;
+   width: 200px;
+   background-repeat: no-repeat;
+   background-position: 50%;
+  }
+
+  .popular-movies{
+    display: flex;
+    font-size: 30px;
+  }
+  
+  .pop-movies {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-evenly;
+    
+  }
+}

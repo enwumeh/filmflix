@@ -2,20 +2,18 @@
   background-color: rgb(26, 26, 23);
   padding-bottom: 44px;
 }
- .movies-link {
-   text-decoration: none;
-   font-size: 33px;
-   padding-left: 33px;
-   color: rgb(198, 198, 203);
-   /* background-color: pink; */
- }
 
- /* .movie-show-link {
-   background-color: rgb(216, 208, 170);
-   font-family: fantasy;
-   height: 43px;
- } */
 
- /* .movie-link {
-   color: red;
- } */
+@media screen and (max-width: 414px) {
+  a.movie-link {
+    font-size: 33px;
+    text-decoration: none;
+    font-family: fantasy;
+    font-weight: 500;
+    color: rgb(140, 137, 137);
+    position: relative;
+    padding: 40px;
+    left: 10px;
+    top: 24px;
+  }
+}
