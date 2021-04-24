@@ -26,9 +26,9 @@ export default function MainContainer() {
   };
 
   const onSubmit = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     const userInput = e.target.value;
-    if (userInput) {
+    if (typeof userInput == "string") {
     console.log("first condition", typeof userInput);
     findMovies(userInput);
     } else {
@@ -54,7 +54,7 @@ export default function MainContainer() {
           </Route>
         <Route path="/movies/:id">
           <Layout>
-            <MovieDetails deets={movies} />
+            <MovieDetails deets={movies} apiKey={apiKey} />
           </Layout>
           </Route>
         <Route exact path="/">
