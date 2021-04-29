@@ -8,9 +8,9 @@
   margin: 0 auto;
   line-height: 200px;
   text-align: center;
-  height: 75%;
+  height: 55%;
   background-color: rgb(26, 26, 23);
-  width: 60%;
+  width: 80%;
 
 }
 
@@ -28,7 +28,7 @@
   background-color: rgb(26, 26, 23);
   border-radius: 50%;
   position: relative;
-  top: 22%;
+  top: 5%;
   font-size: 15px;
   border: none;
   height: 43px;
