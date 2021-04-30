@@ -27,7 +27,8 @@ export default function MainContainer() {
 
   const onSubmit = (e) => {
     e.preventDefault();
-  const userInput = e.target.value;
+    
+    const userInput = e.target.value;
     if (typeof userInput == "string") {
     console.log("first condition", typeof userInput);
     findMovies(userInput);
